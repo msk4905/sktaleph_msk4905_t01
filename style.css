@@ -148,6 +148,16 @@ button {
   letter-spacing: -0.04em;
 }
 
+.section-description {
+  max-width: 680px;
+
+  margin: 14px 0 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+}
+
 
 /* ------------------------------
    Hero
@@ -159,7 +169,7 @@ button {
   display: flex;
   align-items: center;
 
-  padding: 70px 0;
+  padding: 58px 0;
 }
 
 .hero h1 {
@@ -179,13 +189,48 @@ button {
 .intro {
   max-width: 650px;
 
-  margin: 30px 0 0;
+  margin: 26px 0 0;
 
   color: var(--muted);
 
   font-size: 17px;
 
   line-height: 2;
+}
+
+
+/* ------------------------------
+   Target & Purpose
+------------------------------ */
+
+.target-purpose {
+  max-width: 760px;
+
+  margin-top: 24px;
+
+  padding: 14px 18px;
+
+  background: var(--blue-light);
+
+  border-left: 3px solid var(--blue);
+}
+
+.target-purpose p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.target-purpose strong {
+  margin-right: 10px;
+
+  color: var(--blue-dark);
+
+  font-weight: 800;
 }
 
 
@@ -200,7 +245,7 @@ button {
 
   gap: 14px 48px;
 
-  margin-top: 34px;
+  margin-top: 24px;
 }
 
 .hero-info-item {
@@ -229,6 +274,67 @@ button {
 
   font-size: 14px;
   font-weight: 700;
+}
+
+
+/* ------------------------------
+   Public / Private Scope
+------------------------------ */
+
+.scope-section {
+  padding: 88px 0;
+
+  background: var(--surface);
+
+  border-top: 1px solid var(--line);
+}
+
+.scope-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  margin-top: 40px;
+}
+
+.scope-card {
+  padding: 28px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  background: var(--bg);
+}
+
+.scope-card h3 {
+  margin: 0 0 16px;
+
+  color: var(--text);
+
+  font-size: 19px;
+
+  line-height: 1.45;
+}
+
+.scope-card ul {
+  margin: 0;
+
+  padding-left: 20px;
+}
+
+.scope-card li {
+  margin-bottom: 8px;
+
+  color: var(--muted);
+
+  font-size: 15px;
+}
+
+.scope-card li:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -415,7 +521,7 @@ button {
 
   font-size: 14px;
 
-  line-height: 2;
+  line-height: 1.9;
 }
 
 .detail-content p {
@@ -424,6 +530,12 @@ button {
 
 .detail-content p:last-child {
   margin-bottom: 0;
+}
+
+.evidence-source {
+  color: var(--text);
+
+  font-weight: 700;
 }
 
 
@@ -487,23 +599,19 @@ button:focus-visible {
     );
   }
 
-
   .nav {
     height: 60px;
   }
-
 
   .nav nav {
     display: none;
   }
 
-
   .hero {
     min-height: auto;
 
-    padding: 64px 0 72px;
+    padding: 52px 0 64px;
   }
-
 
   .hero h1 {
     font-size: clamp(44px, 13vw, 64px);
@@ -511,41 +619,58 @@ button:focus-visible {
     line-height: 1.2;
   }
 
-
   .intro {
-    margin-top: 26px;
+    margin-top: 22px;
 
     font-size: 15px;
 
     line-height: 1.9;
   }
 
+  .target-purpose {
+    margin-top: 20px;
+
+    padding: 12px 14px;
+  }
+
+  .target-purpose p {
+    font-size: 13px;
+  }
 
   .hero-info {
     flex-direction: column;
 
     gap: 14px;
 
-    margin-top: 28px;
+    margin-top: 22px;
   }
-
 
   .hero-info-item {
     gap: 12px;
   }
 
-
+  .scope-section,
   .likes-section,
   .strength-section {
     padding: 72px 0;
   }
 
+  .scope-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-top: 32px;
+  }
+
+  .scope-card {
+    padding: 22px;
+  }
 
   .likes-list,
   .strength-list {
     margin-top: 36px;
   }
-
 
   .like-item,
   .strength-card {
@@ -556,12 +681,10 @@ button:focus-visible {
     padding: 32px 0;
   }
 
-
   .like-content h3,
   .strength-body h3 {
     font-size: 20px;
   }
-
 
   .like-content p,
   .strength-description {
@@ -570,13 +693,11 @@ button:focus-visible {
     line-height: 1.9;
   }
 
-
   .detail-content {
     font-size: 14px;
 
     line-height: 1.9;
   }
-
 
   .footer .container {
     flex-direction: column;
