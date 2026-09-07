@@ -159,7 +159,7 @@ button {
   display: flex;
   align-items: center;
 
-  padding: 80px 0;
+  padding: 70px 0;
 }
 
 .hero h1 {
@@ -186,6 +186,49 @@ button {
   font-size: 17px;
 
   line-height: 2;
+}
+
+
+/* ------------------------------
+   Hero Info
+------------------------------ */
+
+.hero-info {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px 48px;
+
+  margin-top: 34px;
+}
+
+.hero-info-item {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 14px;
+
+  padding-left: 14px;
+
+  border-left: 2px solid var(--blue);
+}
+
+.hero-info-item span {
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+}
+
+.hero-info-item strong {
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 700;
 }
 
 
@@ -458,7 +501,7 @@ button:focus-visible {
   .hero {
     min-height: auto;
 
-    padding: 72px 0 80px;
+    padding: 64px 0 72px;
   }
 
 
@@ -475,6 +518,20 @@ button:focus-visible {
     font-size: 15px;
 
     line-height: 1.9;
+  }
+
+
+  .hero-info {
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-top: 28px;
+  }
+
+
+  .hero-info-item {
+    gap: 12px;
   }
 
 
