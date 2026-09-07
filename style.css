@@ -1,0 +1,551 @@
+:root {
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+
+  --text: #17212b;
+  --muted: #667482;
+
+  --line: #dce5ec;
+
+  --blue: #9bcde9;
+  --blue-dark: #3f83ad;
+  --blue-light: #eaf6fc;
+
+  --max-width: 1120px;
+}
+
+
+/* ------------------------------
+   Base
+------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family:
+    Pretendard,
+    "Noto Sans KR",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(
+    calc(100% - 48px),
+    var(--max-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: rgba(247, 249, 251, 0.92);
+
+  border-bottom:
+    1px solid rgba(220, 229, 236, 0.8);
+
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--blue-dark);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.nav nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav nav a {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  transition:
+    color 0.2s ease;
+}
+
+.nav nav a:hover,
+.nav nav a:focus-visible {
+  color: var(--blue-dark);
+}
+
+
+/* ------------------------------
+   Common
+------------------------------ */
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  color: var(--blue-dark);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 3vw, 38px);
+
+  line-height: 1.35;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* ------------------------------
+   Hero
+------------------------------ */
+
+.hero {
+  min-height: calc(100vh - 68px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 0;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 7vw, 82px);
+
+  line-height: 1.18;
+
+  letter-spacing: -0.07em;
+}
+
+.hero h1 span {
+  color: var(--blue-dark);
+}
+
+.intro {
+  max-width: 650px;
+
+  margin: 30px 0 0;
+
+  color: var(--muted);
+
+  font-size: 17px;
+
+  line-height: 2;
+}
+
+
+/* ------------------------------
+   Likes
+------------------------------ */
+
+.likes-section {
+  padding: 100px 0;
+
+  background: var(--surface);
+}
+
+.likes-list {
+  margin-top: 48px;
+
+  border-top: 1px solid var(--line);
+}
+
+.like-item {
+  display: grid;
+
+  grid-template-columns: 72px minmax(0, 760px);
+
+  gap: 32px;
+
+  padding: 38px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.like-number {
+  padding-top: 4px;
+
+  color: var(--blue-dark);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.like-content h3 {
+  margin: 0;
+
+  font-size: 22px;
+
+  line-height: 1.45;
+
+  letter-spacing: -0.035em;
+}
+
+.like-content p {
+  max-width: 720px;
+
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 2;
+}
+
+
+/* ------------------------------
+   Strength
+------------------------------ */
+
+.strength-section {
+  padding: 100px 0;
+}
+
+.strength-list {
+  margin-top: 48px;
+
+  border-top: 1px solid var(--line);
+}
+
+.strength-card {
+  display: grid;
+
+  grid-template-columns: 72px minmax(0, 820px);
+
+  gap: 32px;
+
+  padding: 42px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.strength-number {
+  padding-top: 5px;
+
+  color: var(--blue-dark);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.strength-body h3 {
+  margin: 0;
+
+  font-size: 23px;
+
+  line-height: 1.55;
+
+  letter-spacing: -0.04em;
+}
+
+.strength-description {
+  max-width: 720px;
+
+  margin: 12px 0 22px;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 2;
+}
+
+
+/* ------------------------------
+   Detail Button
+------------------------------ */
+
+.detail-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--blue-dark);
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.detail-button span {
+  width: 24px;
+  height: 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--blue);
+
+  border-radius: 50%;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.detail-button[aria-expanded="true"] span {
+  transform: rotate(45deg);
+}
+
+
+/* ------------------------------
+   Detail Content
+------------------------------ */
+
+.detail-content {
+  max-width: 760px;
+
+  margin-top: 24px;
+  padding-top: 22px;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 2;
+}
+
+.detail-content p {
+  margin: 0 0 18px;
+}
+
+.detail-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.footer {
+  padding: 36px 0;
+
+  background: var(--surface);
+
+  border-top: 1px solid var(--line);
+}
+
+.footer .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* ------------------------------
+   Accessibility
+------------------------------ */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--blue);
+
+  outline-offset: 4px;
+
+  border-radius: 4px;
+}
+
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 800px) {
+
+  .container {
+    width: min(
+      calc(100% - 32px),
+      var(--max-width)
+    );
+  }
+
+
+  .nav {
+    height: 60px;
+  }
+
+
+  .nav nav {
+    display: none;
+  }
+
+
+  .hero {
+    min-height: auto;
+
+    padding: 72px 0 80px;
+  }
+
+
+  .hero h1 {
+    font-size: clamp(44px, 13vw, 64px);
+
+    line-height: 1.2;
+  }
+
+
+  .intro {
+    margin-top: 26px;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+
+  .likes-section,
+  .strength-section {
+    padding: 72px 0;
+  }
+
+
+  .likes-list,
+  .strength-list {
+    margin-top: 36px;
+  }
+
+
+  .like-item,
+  .strength-card {
+    grid-template-columns: 42px minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 32px 0;
+  }
+
+
+  .like-content h3,
+  .strength-body h3 {
+    font-size: 20px;
+  }
+
+
+  .like-content p,
+  .strength-description {
+    font-size: 14px;
+
+    line-height: 1.9;
+  }
+
+
+  .detail-content {
+    font-size: 14px;
+
+    line-height: 1.9;
+  }
+
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+}
+
+
+/* ------------------------------
+   Reduced Motion
+------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+
+}
